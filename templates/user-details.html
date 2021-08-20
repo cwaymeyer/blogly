@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/details.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="{{ user.image_url }}" alt="profile picture" />
+    <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+    <div class="btns">
+      <div class="btn"><a href="/users/{{ user.id }}/edit"><button class="abtn">Edit</button></a>
+        <div class="btn"><form></div>
+            <button formaction="/users/{{ user.id }}/delete" formmethod="POST" class="abtn">
+              Delete
+            </button>
+          </form></div>
+          <div class="btn"><a href="/"><button class="abtn">Go back</button></a></div>
+    </div>
+  </body>
+</html>
+
+<!-- Doesn't work: -->
+<!-- <a href="/users/{{ user.id }}/delete"><button>Delete</button></a> -->

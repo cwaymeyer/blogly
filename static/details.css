@@ -1,0 +1,12 @@
+img {
+  max-height: 300px;
+}
+
+.btn {
+  display: inline-block;
+}
+
+.abtn {
+  padding: 4px;
+  margin: 5px;
+}
