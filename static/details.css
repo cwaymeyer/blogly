@@ -10,3 +10,8 @@ img {
   padding: 4px;
   margin: 5px;
 }
+
+.input-content {
+  height: 150px;
+  width: 300px;
+}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+<!--  -->
+{% block content%}
+<form action="/users/{{ post.user.id }}/edit" method="POST">
+  <input type="text" placeholder="{{ post.title }}" />
+  <br />
+  <input type="text" class="input-content" placeholder="{{ post.content }}" />
+  <br />
+  <button type="submit">Submit</button>
+</form>
+{% endblock %}
