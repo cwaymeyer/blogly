@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 <!--  -->
 {% block content%}
+<h1>New Post</h1>
 <form action="/users/{{ user.id }}/posts/new" method="POST">
   <input type="text" placeholder="title" name="title" />
+  <br />
   <br />
   <input
     type="text"
@@ -11,6 +13,14 @@
     name="content"
   />
   <br />
+  <br />
+  {% for tag in all_tags %}
+  <input type="checkbox" name="tags" value="{{ tag.id }}" />{{ tag.name }}
+  <br />
+  {% endfor %}
+  <br />
   <button type="submit">Submit post</button>
 </form>
+<br />
+<a href="/users/{{ user.id }}"><button>Back</button></a>
 {% endblock %}

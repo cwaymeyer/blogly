@@ -1,10 +1,24 @@
 {% extends 'base.html' %}
 <!--  -->
-{% block content%}
-<form action="/users/{{ post.user.id }}/edit" method="POST">
-  <input type="text" placeholder="{{ post.title }}" />
+{% block content %}
+<form action="/posts/{{ post.user.id }}/edit" method="POST">
+  <input type="text" placeholder="{{ post.title }}" name="title" />
   <br />
-  <input type="text" class="input-content" placeholder="{{ post.content }}" />
+  <br />
+  <input
+    type="text"
+    class="input-content"
+    placeholder="{{ post.content }}"
+    name="content"
+  />
+  <br />
+  <br />
+  {% for tag in all_tags %} {% if tag in post.tags %}
+  <input type="checkbox" name="tags" value="{{ tag.id }}" checked />{{ tag.name
+  }} {% else %} <input type="checkbox" name="tags" value="{{ tag.id }}" />{{
+  tag.name }} {% endif %}
+  <br />
+  {% endfor %}
   <br />
   <button type="submit">Submit</button>
 </form>
