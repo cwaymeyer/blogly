@@ -2,11 +2,9 @@
 
 Flask + SQLAlchemy
 
-Simple blogging application.
+Simple blogging application. Users create posts with tags, can view and order posts by tags.
 
 Users -> Posts <-> Tags
-
-Users create posts with tags, can view and order posts by tags.
 
 - <code>git clone https://github.com/cwaymeyer/flask-blogly.git</code>
 - <code>cd flask-blogly</code>
