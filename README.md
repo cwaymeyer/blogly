@@ -2,7 +2,7 @@
 
 Flask + SQLAlchemy
 
-Simple blogging application. Users create posts with tags, can view and order posts by tags.
+Basic blogging application. Users create posts with tags, can view and order posts by tags. Simple styling with Bootstrap.
 
 Users -> Posts <-> Tags
 
